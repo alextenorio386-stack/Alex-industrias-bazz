@@ -6,8 +6,36 @@
     <title>Alex de Industrias Bazz | Salud & Wrestling</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal">
+
+    <a href="https://wa.me/593983467398" class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <header class="relative bg-black text-white py-24 px-6 text-center border-b-4 border-blue-600">
         <h1 class="text-5xl md:text-7xl font-extrabold italic uppercase">
@@ -23,7 +51,7 @@
             <img src="entrena-banner.jpg.jpeg" alt="Entrena" class="w-full h-72 object-cover">
             <div class="p-8 text-center">
                 <h3 class="text-3xl font-bold mb-4 uppercase italic text-blue-500">Sección Entrena</h3>
-                <a href="#" class="inline-block bg-white text-black px-10 py-4 rounded-full font-black uppercase hover:bg-blue-500 transition">¡Dale mambo!</a>
+                <a href="https://wa.me/593983467398?text=Hola%20Alex,%20quiero%20información%20sobre%20entrenamientos" class="inline-block bg-white text-black px-10 py-4 rounded-full font-black uppercase hover:bg-blue-500 transition">¡Dale mambo!</a>
             </div>
         </div>
 
@@ -31,8 +59,20 @@
             <img src="aprende-banner.jpg.jpeg" alt="Aprende" class="w-full h-72 object-cover">
             <div class="p-8 text-center">
                 <h3 class="text-3xl font-bold mb-4 uppercase italic text-blue-500">Aprende y Evoluciona</h3>
-                <a href="#" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-black uppercase hover:bg-blue-700 transition">Ver Artículos</a>
+                <a href="https://www.tiktok.com/@jad_wurs8" target="_blank" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-black uppercase hover:bg-blue-700 transition">Ver TikTok</a>
             </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-black text-center border-t border-gray-800">
+        <h2 class="text-2xl font-bold mb-8 uppercase tracking-widest italic text-blue-500">Únete a la comunidad</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="https://www.facebook.com/share/1D7mV8eG99/?mibextid=wwXIfr" target="_blank" class="flex items-center bg-[#1877f2] text-white px-6 py-3 rounded-xl hover:scale-105 transition">
+                <i class="fab fa-facebook-f mr-3"></i> Facebook
+            </a>
+            <a href="https://www.tiktok.com/@jad_wurs8" target="_blank" class="flex items-center bg-[#000000] border border-white text-white px-6 py-3 rounded-xl hover:scale-105 transition">
+                <i class="fab fa-tiktok mr-3"></i> TikTok
+            </a>
         </div>
     </section>
 
