@@ -7,77 +7,101 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Animación suave para la entrada de la página */
+        body { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
         .btn-whatsapp {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background-color: #25d366;
             color: white;
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
+            font-size: 35px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
             z-index: 100;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .btn-whatsapp:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
+            transform: scale(1.15) rotate(10deg);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6;
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
         }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 font-sans leading-normal tracking-normal">
 
-    <a href="https://wa.me/593983467398" class="btn-whatsapp" target="_blank">
+    <a href="https://wa.me/593983467398" class="btn-whatsapp" target="_blank" title="Escríbeme por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <header class="relative bg-black text-white py-24 px-6 text-center border-b-4 border-blue-600">
-        <h1 class="text-5xl md:text-7xl font-extrabold italic uppercase">
-            ALEX DE INDUSTRIAS <span class="text-blue-500">BAZZ</span>
-        </h1>
-        <p class="text-lg md:text-2xl font-light text-gray-400 tracking-widest mt-4">
-            SALUD • WRESTLING • PÉRDIDA DE PESO • COMEDIA FITNESS
-        </p>
+    <header class="relative bg-black text-white py-24 px-6 text-center border-b-4 border-blue-600 overflow-hidden">
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold italic uppercase tracking-tighter">
+                ALEX DE INDUSTRIAS <span class="text-blue-500">BAZZ</span>
+            </h1>
+            <p class="text-lg md:text-2xl font-light text-gray-400 tracking-widest mt-4 uppercase">
+                SALUD • WRESTLING • PÉRDIDA DE PESO • COMEDIA FITNESS
+            </p>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-20 bg-[radial-gradient(circle,_#1e3a8a_0%,_transparent_70%)]"></div>
     </header>
 
-    <section class="py-12 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        <div class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
-            <img src="entrena-banner.jpg.jpeg" alt="Entrena" class="w-full h-72 object-cover">
-            <div class="p-8 text-center">
+    <section class="py-16 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        
+        <div class="card-hover bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 transition-all duration-300">
+            <div class="relative">
+                <img src="entrena-banner.jpg.jpeg" alt="Entrena" class="w-full h-80 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+            </div>
+            <div class="p-8 text-center relative">
                 <h3 class="text-3xl font-bold mb-4 uppercase italic text-blue-500">Sección Entrena</h3>
-                <a href="https://wa.me/593983467398?text=Hola%20Alex,%20quiero%20información%20sobre%20entrenamientos" class="inline-block bg-white text-black px-10 py-4 rounded-full font-black uppercase hover:bg-blue-500 transition">¡Dale mambo!</a>
+                <p class="text-gray-400 mb-6 italic">¿Listo para transformar tu físico con el mejor mambo?</p>
+                <a href="https://wa.me/593983467398?text=Hola%20Alex,%20quiero%20información%20sobre%20entrenamientos" class="inline-block bg-white text-black px-12 py-4 rounded-full font-black uppercase hover:bg-blue-500 hover:text-white transition-colors duration-300 shadow-lg">¡Dale mambo!</a>
             </div>
         </div>
 
-        <div class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700">
-            <img src="aprende-banner.jpg.jpeg" alt="Aprende" class="w-full h-72 object-cover">
-            <div class="p-8 text-center">
+        <div class="card-hover bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 transition-all duration-300">
+            <div class="relative">
+                <img src="aprende-banner.jpg.jpeg" alt="Aprende" class="w-full h-80 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+            </div>
+            <div class="p-8 text-center relative">
                 <h3 class="text-3xl font-bold mb-4 uppercase italic text-blue-500">Aprende y Evoluciona</h3>
-                <a href="https://www.tiktok.com/@jad_wurs8" target="_blank" class="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-black uppercase hover:bg-blue-700 transition">Ver TikTok</a>
+                <p class="text-gray-400 mb-6 italic">Contenido exclusivo sobre Wrestling y Fitness.</p>
+                <a href="https://www.tiktok.com/@jad_wurs8" target="_blank" class="inline-block bg-blue-600 text-white px-12 py-4 rounded-full font-black uppercase hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/20">Ver TikTok</a>
             </div>
         </div>
     </section>
 
     <section class="py-16 bg-black text-center border-t border-gray-800">
-        <h2 class="text-2xl font-bold mb-8 uppercase tracking-widest italic text-blue-500">Únete a la comunidad</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://www.facebook.com/share/1D7mV8eG99/?mibextid=wwXIfr" target="_blank" class="flex items-center bg-[#1877f2] text-white px-6 py-3 rounded-xl hover:scale-105 transition">
-                <i class="fab fa-facebook-f mr-3"></i> Facebook
+        <h2 class="text-2xl font-bold mb-10 uppercase tracking-widest italic text-blue-500">Únete a la comunidad</h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.facebook.com/share/1D7mV8eG99/?mibextid=wwXIfr" target="_blank" class="group flex items-center bg-[#1877f2] text-white px-8 py-4 rounded-2xl hover:bg-blue-700 transition-all transform hover:-translate-y-1">
+                <i class="fab fa-facebook-f mr-3 text-xl group-hover:scale-110"></i> <span class="font-bold uppercase tracking-wider">Facebook</span>
             </a>
-            <a href="https://www.tiktok.com/@jad_wurs8" target="_blank" class="flex items-center bg-[#000000] border border-white text-white px-6 py-3 rounded-xl hover:scale-105 transition">
-                <i class="fab fa-tiktok mr-3"></i> TikTok
+            <a href="https://www.tiktok.com/@jad_wurs8" target="_blank" class="group flex items-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition-all transform hover:-translate-y-1">
+                <i class="fab fa-tiktok mr-3 text-xl group-hover:scale-110"></i> <span class="font-bold uppercase tracking-wider">TikTok</span>
             </a>
         </div>
     </section>
 
-    <footer class="bg-black text-center py-10 border-t border-gray-800 text-gray-500 text-xs">
-        © 2026 ALEX DE INDUSTRIAS BAZZ | NO PAIN, NO GAIN, JUST FUN
+    <footer class="bg-black text-center py-12 border-t border-gray-900">
+        <p class="text-gray-500 text-sm font-medium tracking-widest">
+            © 2026 ALEX DE INDUSTRIAS BAZZ | <span class="text-blue-600">NO PAIN, NO GAIN, JUST FUN</span>
+        </p>
     </footer>
+
 </body>
 </html>
